@@ -20,10 +20,7 @@ animations = [{
 "name": &"gore",
 "speed": 5.0
 }, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("1_gg0yd")
-}],
+"frames": [],
 "loop": true,
 "name": &"penis",
 "speed": 5.0
