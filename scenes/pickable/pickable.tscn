@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://d3t7eekupuoor"]
+
+[ext_resource type="Texture2D" uid="uid://cqsn6fsgd5etg" path="res://icon.svg" id="1_gg0yd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hyjip"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gg0yd")
+}],
+"loop": true,
+"name": &"chimas",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gg0yd")
+}],
+"loop": true,
+"name": &"gore",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gg0yd")
+}],
+"loop": true,
+"name": &"penis",
+"speed": 5.0
+}]
+
+[node name="Pickable" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_hyjip")
+animation = &"chimas"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
