@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkeux6t5udds"]
+
+[ext_resource type="Texture2D" uid="uid://omx7ksytw8tb" path="res://assets/characters/capivarinha.png" id="1_6coti"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs73g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6coti")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_acuxo"]
+radius = 17.0
+height = 56.0
+
+[node name="Capybara" type="RigidBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_bs73g")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_acuxo")
