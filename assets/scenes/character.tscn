@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://mhvx0jxdi6b5"]
+
+[ext_resource type="Script" path="res://assets/scenes/character.gd" id="1_4l4mw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6753e"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jupds"]
+
+[node name="Character" type="Node2D"]
+script = ExtResource("1_4l4mw")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
+sprite_frames = SubResource("SpriteFrames_6753e")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
+shape = SubResource("RectangleShape2D_jupds")
