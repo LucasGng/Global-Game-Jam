@@ -1,5 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3t7eekupuoor"]
+[gd_scene load_steps=5 format=3 uid="uid://d3t7eekupuoor"]
 
+[ext_resource type="Script" path="res://scenes/pickable/pickable.gd" id="1_euyvm"]
 [ext_resource type="Texture2D" uid="uid://cqsn6fsgd5etg" path="res://icon.svg" id="1_gg0yd"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_hyjip"]
@@ -26,10 +27,15 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_th87n"]
+size = Vector2(128, 128)
+
 [node name="Pickable" type="Area2D"]
+script = ExtResource("1_euyvm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hyjip")
-animation = &"chimas"
+animation = &"penis"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_th87n")
